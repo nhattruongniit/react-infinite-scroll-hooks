@@ -10,9 +10,7 @@ const useInfiniteScroll = callback => {
 
   useEffect(() => {
     if (!isFetching) return;
-    callback(() => {
-      console.log('called back');
-    });
+    callback();
   }, [isFetching, callback]);
 
   const handleScroll = () => {
